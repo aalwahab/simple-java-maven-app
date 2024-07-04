@@ -2,6 +2,9 @@ pipeline {
     agent {
         label 'new'
     }
+    environment { 
+        JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+    }
     stages {
         stage('Build') {
             steps {
