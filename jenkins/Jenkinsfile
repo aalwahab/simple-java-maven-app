@@ -3,7 +3,7 @@ pipeline {
         label 'new'
     }
     environment { 
-        JAVA_HOME='/usr/lib/jvm/java-17-openjdk-17.0.11.0.9-2.el8.x86_64/bin/'
+        JAVA_HOME='/usr/lib/jvm/java-17-openjdk-17.0.11.0.9-2.el8.x86_64'
     }
     stages {
         stage('Test Java') {
@@ -14,9 +14,6 @@ pipeline {
             }
         }
         stage('Build') {
-            environment { 
-                JAVA_HOME='/usr/lib/jvm/java-17-openjdk-17.0.11.0.9-2.el8.x86_64/bin/'
-            }
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
