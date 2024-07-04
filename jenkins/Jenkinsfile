@@ -2,15 +2,11 @@ pipeline {
     agent {
         label 'new'
     }
-    environment { 
-        JAVA_HOME='/usr/lib/jvm/java-17-openjdk-17.0.11.0.9-2.el8.x86_64/bin/'
-    }
     stages {
         stage('Test Java') {
             
             steps {
-                sh 'echo $JAVA_HOME'
-                sh 'PATH="$JAVA_HOME:$PATH"'
+               
                 sh 'java -version'
             }
         }
