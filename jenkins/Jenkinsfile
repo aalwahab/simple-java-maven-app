@@ -3,7 +3,7 @@ pipeline {
         label 'new'
     }
     environment { 
-        JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+        JAVA_HOME='/usr/lib/jvm/java-17-openjdk'
     }
     stages {
         stage('Test Java') {
