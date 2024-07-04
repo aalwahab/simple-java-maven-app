@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'SharedAgent'
+        label 'new'
     }
     stages {
         stage('Build') {
